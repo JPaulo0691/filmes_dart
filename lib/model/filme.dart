@@ -1,4 +1,6 @@
-class Filme {
+import 'package:flutter/material.dart';
+
+class Filme extends StatefulWidget {
   int id;
   String imagem;
   String titulo;
@@ -11,10 +13,16 @@ class Filme {
 
   Filme(this.imagem, this.titulo, this.genero, this.faixa_etaria, this.duracao,
       this.nota, this.ano, this.descricao,
-      {this.id = 0});
+      {required this.id});
 
   @override
-  String toString() {
-    return 'Filme{id: $id,  $imagem, Titulo: $titulo}';
+  State<Filme> createState() => _FilmeState();
+}
+
+class _FilmeState extends State<Filme> {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }

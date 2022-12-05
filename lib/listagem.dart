@@ -37,8 +37,7 @@ class _ListagemState extends State<Listagem> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: Text("Filmes"),
         actions: [
@@ -110,10 +109,9 @@ class _ListagemState extends State<Listagem> {
                       ]),
                     );
                   }
-                  return Text("Erro ao carregar Filmes........");
-                  break;
+                  return const Text("Erro ao carregar Filmes........");
               }
-              return Text("Erro desconhecido");
+              return const Text("Erro desconhecido");
             })),
       ),
       floatingActionButton: FloatingActionButton(
@@ -127,6 +125,6 @@ class _ListagemState extends State<Listagem> {
           );
         },
       ),
-    ));
+    );
   }
 }
