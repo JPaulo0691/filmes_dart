@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
+import 'listagem.dart';
+
 class Cadastro extends StatefulWidget {
   const Cadastro({super.key});
 
@@ -108,8 +110,15 @@ class _CadastroState extends State<Cadastro> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
           child: const Icon(Icons.save_outlined),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) {
+                return Listagem();
+              }),
+            );
+          },
         ),
       ),
     );
